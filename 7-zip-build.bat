@@ -6,7 +6,7 @@ set "Build_Root=%~dp0"
 :Init
 rem 7-zip version
 rem https://www.7-zip.org/
-set version=7z2602
+set version=7z2603
 rem https://github.com/mcmilk/7-Zip-zstd
 set zstd_version=26.02-v1.5.7-R1
 
@@ -120,6 +120,7 @@ if exist "7-Zip-zstd-%zstd_version%" (
 set "Build_Root=%CD%"
 set "APPVEYOR_BUILD_FOLDER=%CD%"
 copy ..\7-zip-patch.sh 7-zip-patch.sh
+copy ..\7-zip-patch-nsis.sh 7-zip-patch-nsis.sh
 copy ..\7-zip-patch-xp.sh 7-zip-patch-xp.sh
 goto :Patch
 
